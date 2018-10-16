@@ -3,16 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MarvelDataService } from './app-service/marvel-data.service';
+import { MaterialModule } from './app-modules/material-module/material.module';
+import { CharacterComponent } from './app-components/character/character.component';
+import { PageNotFoundComponent } from './app-components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CharacterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
-  providers: [],
+  providers: [MarvelDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
